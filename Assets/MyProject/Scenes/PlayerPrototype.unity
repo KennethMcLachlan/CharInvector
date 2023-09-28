@@ -339,12 +339,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675851509}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b370518b0f7c6a44eb85133fb3522770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentWeapon: {fileID: 1322378495}
+--- !u!114 &1675851523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675851509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7114e45fcf88cd64eb86ad414f2d50ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 0.5
+  nextAttackTime: 0.1
 --- !u!1 &1804355574
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,6 +743,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2911877246236993261, guid: 97c413d1ff4af8647a62de5d63cf644c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1675851516}
+    - targetCorrespondingSourceObject: {fileID: 2911877246236993261, guid: 97c413d1ff4af8647a62de5d63cf644c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1675851523}
     - targetCorrespondingSourceObject: {fileID: 8513834875063318336, guid: 97c413d1ff4af8647a62de5d63cf644c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1322378495}

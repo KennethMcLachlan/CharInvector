@@ -50,34 +50,41 @@ public class PlayerCombat : MonoBehaviour
                     {
                         animator.SetBool("AttackStart", true);
                         Debug.Log("AttartStart has run");
-                        animator.SetBool(weapon + "Attack" + (i + 1), true);
-                        Debug.Log("Attack + i is true");
+                        animator.SetBool(/*weapon + */"Attack" + (i + 1), true);
+                        Debug.Log("Attack" + i + "is true");
                         lastClicked = Time.time;
                     }
                 }
                 else
                 {
-                    if (comboCounter >= (i + 1) && animator.GetCurrentAnimatorStateInfo(0).IsName(weapon + "Attack" + i))
+                    if (comboCounter >= (i + 1) && animator.GetCurrentAnimatorStateInfo(0).IsName(/*weapon + */"Attack" + i))
                     {
-                        animator.SetBool(weapon + "Attack" + (i + 1), true);
-                        animator.SetBool(weapon + "Attack" + i, true);
+                        animator.SetBool(/*weapon + */"Attack" + (i + 1), true);
+                        animator.SetBool(/*weapon + */"Attack" + i, true);
                         lastClicked = Time.time;
                     }
                 }
             }
+
         }
 
         //Animation Exit Bool Reset
 
         for (int i = 0; i < currentWeapon.comboLength; i++)
         {
-            if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.9f && animator.GetCurrentAnimatorStateInfo(0).IsName(weapon + "Attack" + (i + 1)))
+            if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.9f && animator.GetCurrentAnimatorStateInfo(0).IsName(/*weapon + */"Attack" + (i + 1)))
             {
                 comboCounter = 0;
                 lastComboEnd = Time.time;
-                animator.SetBool(weapon + "Attack" + (i + 1), false);
+                animator.SetBool(/*weapon + */"Attack" + (i + 1), false);
                 animator.SetBool("AttackStart", false);
+                Debug.Log("AttackStart is false");
+                return;
             }
+            //else
+            //{
+            //    animator.SetBool("AttackStart", true);
+            //}
 
             
         }

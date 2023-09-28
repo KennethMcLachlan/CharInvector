@@ -27,6 +27,7 @@ namespace Invector.vCharacterController
         {
             InitilizeController();
             InitializeTpCamera();
+
         }
 
         protected virtual void FixedUpdate()
@@ -74,11 +75,13 @@ namespace Invector.vCharacterController
 
         protected virtual void InputHandle()
         {
-            MoveInput();
-            CameraInput();
-            SprintInput();
-            StrafeInput();
-            JumpInput();
+            
+                MoveInput();
+                CameraInput();
+                SprintInput();
+                StrafeInput();
+                JumpInput();
+            
         }
 
         public virtual void MoveInput()
